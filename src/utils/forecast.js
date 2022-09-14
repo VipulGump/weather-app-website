@@ -10,7 +10,7 @@ const forecast= ( latitude , longitude , callback)=>{
         }else if (responseError){
             callback('Unable to find location', undefined);
         } else{
-            callback(undefined, `The temperature is ${current.temperature} . It feels like ${current.feelslike} `);
+            callback(undefined, `The temperature is ${current.temperature} . It feels like ${current.feelslike}. Chances of rain is ${current.precip}% `);
         }
     })
 };
